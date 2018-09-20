@@ -41,19 +41,20 @@ public class MainActivity extends AppCompatActivity {
         ApiEndpoints apiService =
                 ApiClient.getClient().create(ApiEndpoints.class);
 
-        Call<VisitesResponse> call = apiService.getVisites();
-        call.enqueue(new Callback<VisitesResponse>() {
+        Call<Visites> call = apiService.getVisites();
+        call.enqueue(new Callback<Visites>() {
             @Override
-            public void onResponse(@NonNull Call<VisitesResponse> call, @NonNull Response<VisitesResponse> response) {
-                int statusCode = response.code();
-                List<Visites> visites = response.body().getResults();
+            public void onResponse(Call <Visites> call, Response <Visites> response) {
+                assert response.body() != null;
+                List<Visites> visites = response.body().getLocation();
                 recyclerView.setAdapter(new VisitesAdapter(visites, R.layout.list_item_visites, getApplicationContext()));
             }
 
             @Override
-            public void onFailure(@NonNull Call<VisitesResponse> call, @NonNull Throwable t) {
+            public void onFailure(Call <Visites> call, Throwable t) {
                 Log.e(TAG, "null" );
+
             }
-        });
+            });
     }
 }

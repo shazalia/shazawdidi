@@ -5,14 +5,25 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class VisitesResponse {
-    @SerializedName("lastId")
-    private int lastId;
-    @SerializedName("results")
-    private List<Visites> results;
+    @SerializedName("Location")
+    private List<Visites> Location;
+    @SerializedName( "longitude" )
+    private Integer longitude;
+    @SerializedName( "latitude" )
+    private Integer latitude;
 
 
-    public List <Visites> getResults() {
-        return results;
+    public List <Visites> getLocation() {
+        return Location;
     }
 
+
+
+    public Integer getLongitude() {
+        return longitude;
+    }
+
+    public Integer getLatitude() {
+        return latitude;
+    }
 }

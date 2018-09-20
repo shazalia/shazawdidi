@@ -20,12 +20,42 @@ public class Visites {
     private String MerchantName;
     @SerializedName("TicketNo")
     private Integer TicketNo;
+    @SerializedName("Location")
+    private List<Visites> Location;
+    @SerializedName( "longitude" )
+    private Integer longitude;
+    @SerializedName( "latitude" )
+    private Integer latitude;
 
 //    public Visites(Integer Id, String visitTitle, String description, String VisitDate, List<Integer>MerchantID
 //            , String MerchantName, Integer TicketNo ) {
 //    }
     public Integer getId() {
         return Id;
+    }
+
+    public List <Visites> getLocation() {
+        return Location;
+    }
+
+    public void setLocation(List <Visites> location) {
+        Location = location;
+    }
+
+    public Integer getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Integer longitude) {
+        this.longitude = longitude;
+    }
+
+    public Integer getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(Integer latitude) {
+        this.latitude = latitude;
     }
 
     public void setId(Integer id) {
