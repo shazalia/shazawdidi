@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(@NonNull Call<VisitesResponse> call, @NonNull Response<VisitesResponse> response) {
                 int statusCode = response.code();
-                List<Visites> movies = response.body().getResults();
-                recyclerView.setAdapter(new VisitesAdapter(movies, R.layout.list_item_visites, getApplicationContext()));
+                List<Visites> visites = response.body().getResults();
+                recyclerView.setAdapter(new VisitesAdapter(visites, R.layout.list_item_visites, getApplicationContext()));
             }
 
             @Override
