@@ -21,9 +21,9 @@ public class Visites {
     @SerializedName("TicketNo")
     private Integer TicketNo;
 
-    public Visites(Integer Id, String visitTitle, String description, String VisitDate, List<Integer>MerchantID
-            , String MerchantName, Integer TicketNo ) {
-    }
+//    public Visites(Integer Id, String visitTitle, String description, String VisitDate, List<Integer>MerchantID
+//            , String MerchantName, Integer TicketNo ) {
+//    }
     public Integer getId() {
         return Id;
     }
