@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
 
 
-    private final static String API_KEY = "";
 
 
     @Override
@@ -35,10 +34,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView( R.layout.activity_main);
 
-        if (API_KEY.isEmpty()) {
-            Toast.makeText(getApplicationContext(), "Please obtain your API KEY first!", Toast.LENGTH_LONG).show();
-            return;
-        }
 
         final RecyclerView recyclerView = findViewById(R.id.visites_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

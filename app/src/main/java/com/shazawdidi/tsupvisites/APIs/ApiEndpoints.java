@@ -9,5 +9,5 @@ import retrofit2.http.Query;
 
 public interface ApiEndpoints {
     @GET("movie/{id}")
-    abstract Call <VisitesResponse> getVisites();
+     Call <VisitesResponse> getVisites();
 }
